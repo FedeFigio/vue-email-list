@@ -14,6 +14,7 @@
         <h1>Ti servono delle email random?</h1>
         <input placeholder="Quanti te ne servono" type="text" v-model="quantity">
         <button @click="generateEmail">GENERA</button>
+        <span v-if="errore.length">{{ errore }}</span>
         <ol>
             <li v-if="emails.length == quantity" v-for="(email, index) in emails" :key="index">
                 {{email}}
